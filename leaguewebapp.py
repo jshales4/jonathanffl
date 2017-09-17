@@ -12,5 +12,4 @@ def ranks():
 def rank():
     return render_template('ranks.html',league=League(1140354, 2017).power_rankings(week=2))
   
-if __name__ == "__main__":
-  app.run()
+app.run()
