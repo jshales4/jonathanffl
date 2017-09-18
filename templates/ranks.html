@@ -56,9 +56,12 @@
   <table class="table table-bordered" border=1>
     <thead>
       <tr>
-        <th width="35%">Owner Name</th>
-        <th width="45%">Team Name</th>
-        <th width="35%">Power Ranking</th>
+        <th width="18%">Owner Name</th>
+        <th width="22%">Team Name</th>
+        <th width="18%">Power Ranking</th>
+        <th width="8%">Win Rate</th>
+        <th width="15%">Points For</th>
+        <th width="15%">Points Against</th>
       </tr>
     </thead>
     <tbody>
@@ -67,6 +70,9 @@
         <td>{{ item[1].owner }}</td>
         <td>{{ item[1].team_name }}</td>
         <td>{{ item[0] }}</td>
+        <td>{{ item[1].wins/(item[1].wins+item[1].losses) }}</td>
+        <td>{{ item[1].points_for }}</td>
+        <td>{{ item[1].points_against }}</td>
       </tr>
 {% endfor %}
 </tbody>
