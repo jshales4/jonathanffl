@@ -11,7 +11,7 @@ def ranks():
 
 @app.route("/ranks")
 def rank():
-    return render_template('ranks.html',league=League(1140354, 2017).power_rankings(week=2))
+    return render_template('ranks.html',league=League(1140354, 2017).power_rankings(week=3))
   
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
